@@ -1,0 +1,226 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(1, 26, 66); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(44, 76, 128);
+    border-radius: 40px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(15, 44, 88); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "Roboto", sans-serif;
+}
+
+::marker {
+    content: none;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+    background: rgb(51, 81, 128);
+}
+
+#sidebar {
+    height: 100vh;
+    width: 250px;
+    overflow: hidden;
+    color: white;
+}
+
+#sidebar > *, .main-playlist-container {
+    margin: 4px;
+    background: rgb(15, 44, 88);
+    border-radius: 4px;
+}
+
+#songRange {
+    width: 90%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+
+#songRange::-webkit-slider-runnable-track {
+    height: 10px;
+    border-radius: 20px;
+    background: rgb(51, 81, 128);
+}
+
+#songRange::-moz-range-track {
+    height: 10px;
+    border-radius: 20px;
+    background: rgb(51, 81, 128);
+}
+
+#songRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    margin-top: -3px;
+    background: rgb(138, 169, 216);
+    border-radius: 10px;
+}
+
+#songRange::-moz-range-thumb {
+    -moz-appearance: none;
+    height: 16px;
+    width: 16px;
+    margin-top: -3px;
+    background: rgb(138, 169, 216);
+    border-radius: 10px;
+}
+
+.album-cover {
+    min-height: 40px;
+    min-width: 40px;
+    border: 1px solid;
+
+    background-image: url("./img/goldfish.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.description-box {
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+
+.description-view {
+    margin: auto 0;
+}
+
+.description-view > * {
+    padding: 4px 0;
+}
+
+.divider {
+    border-bottom: 1px solid;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-playlist-container {
+    flex: 2;
+    color: white;
+}
+
+.playlist-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 0;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.playlist-container {
+    min-height: 100px;
+    flex: 1;
+    padding: 4px 0;
+    overflow-y: scroll;
+}
+
+.playlist-slider-container li {
+    display: flex;
+    gap: 4px;
+    padding: 4px 2px;
+}
+
+.sidebar-btn-container li {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+}
+
+.song span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 0 auto;
+}
+
+.song span button {
+    height: 25px;
+    width: 25px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(44, 76, 128);
+}
+
+.song span button:hover {
+    background: rgb(206, 0, 0);
+}
+
+.song span button:active {
+    background: rgb(155, 0, 0);
+}
+
+.song-list {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.song-list img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.song-player-bar {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background: rgb(10, 36, 75);
+    border-radius: 4px;
+}
+
+.view-header {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background: rgb(10, 36, 75);
+    border-radius: 4px;
+}
+
+.view-header img {
+    height: 250px;
+    width: 250px;
+    border-radius: 4px;
+}
+
+.playlist-btn:hover, .sidebar-btn-container li:hover, .playlist-slider-container li:hover, .song:hover {
+    background: white !important;
+    color: rgb(15, 44, 88);
+}
+
+.playlist-btn:active, .sidebar-btn-container li:active, .playlist-slider-container li:active {
+    background: rgb(192, 192, 192);
+}
